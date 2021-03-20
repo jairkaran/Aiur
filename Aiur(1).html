@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Aiur</title>
+    <link rel="stylesheet" href="aiur.css">
+    <script src="aiur.js"></script>
+
+</head>
+<body class="preload" onload="document.body.className='';">
+
+<div id="logo"> Aiur </div>
+<div class="wrapper">
+    <div id="top-bar" class="top-bar">
+            <ul class="top-bar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li class="login"><a onclick="document.getElementById('id01').style.display='block'">Login</a>
+                    <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+                        <form class="modal-content animate">
+                            <div class="img-container">
+                                <img src="https://ps.w.org/wp-user-avatar/assets/icon-256x256.png?rev=1755722" alt="Avatar" class="avatar">
+                            </div>
+
+                            <div class="login-container">
+                                <label class="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                <label class="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel-btn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <div id="searchBox"   class="search-container">
+                        <div class="search"></div>
+                        <div class="input-box">
+                            <label>
+                                <input type="text" placeholder="Search...">
+                            </label>
+                            <div class="close"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    </div>
+</div>
+<div class="h1">
+    <p>From Here to There to <span>Anywhere</span></p>
+</div>
+<div class="map-wrapper">
+    <div class="loc-bar"> Where are we <span>going?</span>
+        <div class="current-location">
+            <label for="input-location">Enter your Location</label>
+            <input class="loc" id="input-location">
+        </div>
+
+        <div class="destination">
+            <label class="des" for="input-destination">Enter your Destination</label>
+            <input id="input-destination">
+        </div>
+
+        <button id="searchButton" class="search-button">Search</button>
+    </div>
+
+    <iframe id="map" class="map" src="https://www.google.com/maps/d/embed?mid=1BODW7cYaUmGFylUlS2dWhKyiEUsi23Py"></iframe>
+</div>
+
+
+
+<script src="aiur.js"></script>
+</body>
+</html>
