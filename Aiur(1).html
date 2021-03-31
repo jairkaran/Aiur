@@ -5,8 +5,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-compatible" content="ie=edge">
     <title>Aiur</title>
-    <link rel="stylesheet" href="aiur.css">
-    <script src="aiur.js"></script>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 <body class="preload" onload="document.body.className='';">
@@ -14,53 +13,56 @@
 <div id="logo"> Aiur </div>
 <div class="wrapper">
     <div id="top-bar" class="top-bar">
-            <ul class="top-bar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-                <li class="login"><a onclick="document.getElementById('id01').style.display='block'">Login</a>
-                    <div id="id01" class="modal">
+        <ul class="top-bar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li class="login"><a onclick="document.getElementById('id01').style.display='block'">Login</a>
+                <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'"
         class="close" title="Close Modal">&times;</span>
 
-                        <form class="modal-content animate">
-                            <div class="img-container">
-                                <img src="https://ps.w.org/wp-user-avatar/assets/icon-256x256.png?rev=1755722" alt="Avatar" class="avatar">
+                    <form class="modal-content animate">
+                        <div id="profile-container" class="img-container">
+                            <div>
+                                <input type="file" id="fileTag">
+                                <img src="" class="profImage" id="preview" alt="">
                             </div>
-
-                            <div class="login-container">
-                                <label class="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                                <label class="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                                <button type="submit">Login</button>
-                                <label>
-                                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                                </label>
-                            </div>
-
-                            <div class="container" style="background-color:#f1f1f1">
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel-btn">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-                <li>
-                    <div id="searchBox"   class="search-container">
-                        <div class="search"></div>
-                        <div class="input-box">
-                            <label>
-                                <input type="text" placeholder="Search...">
-                            </label>
-                            <div class="close"></div>
                         </div>
+
+                        <div class="login-container">
+                            <label class="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label class="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:black">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancel-btn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div id="searchBox"   class="search-container">
+                    <div class="search"></div>
+                    <div class="input-box">
+                        <label>
+                            <input type="text" placeholder="Search...">
+                        </label>
+                        <div class="close"></div>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 <div class="h1">
@@ -85,7 +87,9 @@
 </div>
 
 
-
-<script src="aiur.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
