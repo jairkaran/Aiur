@@ -1,3 +1,25 @@
+let fileTag = document.getElementById("fileTag"),
+    preview = document.getElementById("preview");
+
+fileTag.addEventListener("change", function() {
+    changeImage(this);
+});
+
+function changeImage(input) {
+    let reader;
+
+    if (input.files && input.files[0]) {
+        reader = new FileReader();
+
+        reader.onload = function(e) {
+            preview.setAttribute('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("searchBox").addEventListener("click", function() {
         let arr = this.className.split(" ");
@@ -22,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 }, false);
+
 
 let modal = document.getElementById('id01');
 
