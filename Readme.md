@@ -13,3 +13,5 @@ Om de app zo goed als mogelijk te laten werken gaan er bepaalde toegangsmogelijk
 
 ## Aiur Project
 Dit is slechts een basis app die ik zelf heb gemaakt als school opdracht.
+
+https://aiurtransit.netlify.app/
