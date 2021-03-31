@@ -31,15 +31,8 @@ body {
     font-size: xxx-large;
 
     transition: opacity 1s ease 2s, height 1s ease 3s;
-    /*                 __^__    __^__      __^__    __^__
-                        [1]      [2]        [3]      [4]
-
-        [1] Time opacity takes to transition from 1 to 0;
-        [2] Time opacity waits until it starts transitioning
-        [3] Time height takes to transition from 100% to 0;
-        [4] Time height waits until it starts transitioning (>= [1] + [2]);
-    */
 }
+
 .preload #logo {
     opacity: 1;
     height: 100%;
